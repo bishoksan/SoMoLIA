@@ -1,0 +1,29 @@
+1. linear cut generation (there are also equality constraitns involved, the cut at the moment consiers =< only )
+2. issues with the mip solver
+3. sometimes the tactic returns null (propagate-ineqs), or false
+4. if a formula is a conjunction and the tactic gives false then it is unsat, if tactic returns true then this constraint 
+is not needed
+5. check gurobi if unsat core generation is easier, think about cut, correctness
+6. trading with gurobi other params
+6. make program parametric
+7. investigate if removing a single sat instance is a good idea
+8. gurobi unsat core also shows which variable are in the core
+
+9 collectConjConstraint causing stack overflow
+10 check if the solution is a real integer solution
+
+
+QUANTIFIER ELIMINATION
+1. pre-processing creates some aux variables (remove_unconstr tactic)
+2.Incorrect results (due to bv_extract translation): 
+    DeltaTR_CP_RP_DIFF_QESMT_benchmark_conjunction_11.smt (wrong formula emitted)
+    DeltaTR_RFRNC_OUT_QESMT_benchmark_conjunction_4.smt 
+3. handling of ite operation
+4. obtaining benchmarks
+
+
+
+
+Everywhere
+1. the handling of negative integers while generating maExpr
+2. in  IG: blocking some models also has to take care of the index not only the original id (only block those )
